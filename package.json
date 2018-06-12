@@ -1,0 +1,10 @@
+{
+  "name": "ehummerston.github.io",
+  "version": "0.0.1",
+  "description": "my cool website",
+  "scripts": {},
+  "repository": "git@github.com:EHummerston/ehummerston.github.io.git",
+  "author": "Edward Hummerston <ed.hummerston@gmail.com>",
+  "devDependencies": {},
+  "dependencies": {}
+}

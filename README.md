@@ -1,2 +1,1 @@
-# ehummerston.github.io
-My cool website
+# <ehummerston.github.io>
