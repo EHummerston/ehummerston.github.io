@@ -1,0 +1,53 @@
+$gutter: 30px;
+
+@mixin clearfix() {
+  &::after, &::before {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.container {
+  display: block;
+  max-width: 768px;
+  padding: 0 $gutter;
+  margin: 0 auto;
+}
+
+.row {
+  @include clearfix();
+  margin-left: -$gutter;
+  margin-right: -$gutter;
+  position: relative;
+}
+
+[class*=col-] {
+  padding: 0 $gutter;
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.section-wrapper {
+  position: relative;
+
+  .section-wrapper-right, .section-wrapper-left {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 50%;
+    z-index: -1;
+  }
+
+  .section-wrapper-right {
+    right: 0;
+  }
+  .section-wrapper-left {
+    left: 0;
+  }
+}

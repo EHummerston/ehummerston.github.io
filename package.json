@@ -2,9 +2,14 @@
   "name": "ehummerston.github.io",
   "version": "0.0.1",
   "description": "my cool website",
+  "main": "index.js",
   "scripts": {},
   "repository": "git@github.com:EHummerston/ehummerston.github.io.git",
   "author": "Edward Hummerston <ed.hummerston@gmail.com>",
-  "devDependencies": {},
-  "dependencies": {}
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "gulp-sass": "^4.0.1"
+  }
 }

@@ -1,0 +1,23 @@
+@import "resets";
+@import "grid";
+
+body {
+  background-color: black;
+  font-family: "Courier New", monospace;
+  color: greenyellow;
+}
+
+.flame-gif {
+  background-image:
+          linear-gradient(rgba(black, 0.8), rgba(black, 0.8)),
+          url('../../lib/images/flame1.gif');
+  background-attachment: fixed;
+  background-size: 15%;
+  background-position: bottom center;
+}
+
+.padded-cell {
+  padding: 200px 0;
+  text-align: center;
+  text-shadow: 2px 2px 1px black;
+}
