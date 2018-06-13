@@ -87,13 +87,36 @@ body {
   font-family: "Courier New", monospace;
   color: greenyellow; }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  pointer-events: none; }
+
 .flame-gif {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../../lib/images/flame1.gif");
   background-attachment: fixed;
   background-size: 15%;
   background-position: bottom center; }
 
-.padded-cell {
+.hacker-lines {
+  background-image: repeating-linear-gradient(rgba(173, 255, 47, 0.2), rgba(173, 255, 47, 0.2) 1px, transparent 1px, transparent 10px); }
+
+.scanlines {
+  background-image: repeating-linear-gradient(rgba(150, 150, 150, 0.1), rgba(150, 150, 150, 0.1) 3px, rgba(0, 0, 0, 0.1) 3px, rgba(0, 0, 0, 0.1) 6px);
+  background-attachment: fixed;
+  animation: scanline-flicker 100ms reverse infinite; }
+
+@keyframes scanline-flicker {
+  from {
+    background-image: repeating-linear-gradient(rgba(128, 128, 128, 0.1), rgba(128, 128, 128, 0.1) 3px, rgba(0, 0, 0, 0.1) 3px, rgba(0, 0, 0, 0.1) 6px); }
+  to {
+    background-image: repeating-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 3px, rgba(128, 128, 128, 0.1) 3px, rgba(128, 128, 128, 0.1) 6px); } }
+
+.perfect-cell {
   padding: 200px 0;
   text-align: center;
   text-shadow: 2px 2px 1px black; }
