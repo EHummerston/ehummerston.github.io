@@ -1,3 +1,5 @@
+@import "helpers";
+
 $gutter: 30px;
 
 @mixin clearfix() {
@@ -13,38 +15,62 @@ $gutter: 30px;
   max-width: 768px;
   padding: 0 $gutter;
   margin: 0 auto;
+  @mixin container($container-width) {
+    @media all and (min-width: $container-width) {
+      max-width: $container-width - 2*$gutter;
+    }
+  }
+  @include container(1024px);
+  @include container(1200px);
+  @include container(1440px);
+
 }
 
 .row {
-  @include clearfix();
+  //@include clearfix();
   margin-left: -$gutter;
   margin-right: -$gutter;
   position: relative;
-}
-
-[class*=col-] {
-  padding: 0 $gutter;
-  float: left;
-  position: relative;
-  min-height: 1px;
-  width: 100%;
-}
-
-.col-6 {
-  @media all and (min-width: 768px) {
-    width: 50%;
+  @include desktop() {
+    display: table;
+    width: calc(100% + #{$gutter*2});
   }
+}
+
+@mixin column($index, $columns) {
+  .col-#{$columns - $index} {
+    padding: 0 $gutter;
+    position: relative;
+    min-height: 1px;
+    width: 100%;
+    vertical-align: middle;
+    @include desktop() {
+      display: table-cell;
+      width: (($index / $columns) * 100%);
+    }
+  }
+}
+
+$columns: 12;
+@for $i from 0 to $columns {
+  @include column($i + 1, $columns);
 }
 
 .section-wrapper {
   position: relative;
+  z-index: 0;
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
 
   .section-wrapper-right, .section-wrapper-left {
     position: absolute;
     height: 100%;
     top: 0;
     width: 50%;
-    z-index: -1;
+    //z-index: -1;
     @media all and (max-width: 767px) {
       display: none;
     }
