@@ -7,16 +7,47 @@ body {
   color: greenyellow;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+
 .flame-gif {
-  background-image:
-          linear-gradient(rgba(black, 0.8), rgba(black, 0.8)),
-          url('../../lib/images/flame1.gif');
+  background-image: linear-gradient(rgba(black, 0.8), rgba(black, 0.8)),
+  url('../../lib/images/flame1.gif');
   background-attachment: fixed;
   background-size: 15%;
   background-position: bottom center;
 }
 
-.padded-cell {
+.hacker-lines {
+  background-image: repeating-linear-gradient(rgba(greenyellow, 0.2), rgba(greenyellow, 0.2) 1px, transparent 1px, transparent 10px);
+}
+
+.scanlines {
+  $scanline-width: 3px;
+  background-image: repeating-linear-gradient(rgba(150, 150, 150, 0.1), rgba(150, 150, 150, 0.1) $scanline-width, rgba(0, 0, 0, 0.1) $scanline-width, rgba(0, 0, 0, 0.1) $scanline-width*2);
+  background-attachment: fixed;
+  animation: scanline-flicker 100ms reverse infinite;
+
+  @at-root {
+    @keyframes scanline-flicker {
+      from {
+        background-image: repeating-linear-gradient(rgba(grey, 0.1), rgba(grey, 0.1) $scanline-width, rgba(black, 0.1) $scanline-width, rgba(black, 0.1) $scanline-width*2);
+      }
+      to {
+        background-image: repeating-linear-gradient(rgba(black, 0.1), rgba(black, 0.1) $scanline-width, rgba(grey, 0.1) $scanline-width, rgba(grey, 0.1) $scanline-width*2);
+      }
+    }
+  }
+}
+
+.perfect-cell {
   padding: 200px 0;
   text-align: center;
   text-shadow: 2px 2px 1px black;
