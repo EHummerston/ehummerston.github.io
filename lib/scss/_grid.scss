@@ -27,10 +27,13 @@ $gutter: 30px;
   float: left;
   position: relative;
   min-height: 1px;
+  width: 100%;
 }
 
 .col-6 {
-  width: 50%;
+  @media all and (min-width: 768px) {
+    width: 50%;
+  }
 }
 
 .section-wrapper {
@@ -42,6 +45,9 @@ $gutter: 30px;
     top: 0;
     width: 50%;
     z-index: -1;
+    @media all and (max-width: 767px) {
+      display: none;
+    }
   }
 
   .section-wrapper-right {

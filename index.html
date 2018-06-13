@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./dist/css/app.css">
 </head>
 <body>
-<div class="overlay scanlines"></div>
 <div class="section-wrapper">
     <div class="section-wrapper-left flame-gif"></div>
     <div class="section-wrapper-right hacker-lines"></div>
@@ -21,7 +20,13 @@
                 </div>
             </div>
             <div class="col-6">
-                <img src="./lib/images/wizard_2.gif" style="width: 100%;"/>
+                <div class="live-feed" style="
+                    background-image: url(./lib/images/wizard_2.gif);
+                    background-position: 45% 25%;
+                ">
+                    <div class="overlay scanlines"></div>
+                    <div class="live-feed-text">Live</div>
+                </div>
             </div>
         </div>
     </div>

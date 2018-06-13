@@ -8,12 +8,12 @@ body {
 }
 
 .overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 10;
   pointer-events: none;
 }
 
@@ -21,7 +21,7 @@ body {
   background-image: linear-gradient(rgba(black, 0.8), rgba(black, 0.8)),
   url('../../lib/images/flame1.gif');
   background-attachment: fixed;
-  background-size: 15%;
+  background-size: 100px;
   background-position: bottom center;
 }
 
@@ -30,10 +30,12 @@ body {
 }
 
 .scanlines {
-  $scanline-width: 3px;
+  $scanline-width: 2px;
+  $fps: 30;
   background-image: repeating-linear-gradient(rgba(150, 150, 150, 0.1), rgba(150, 150, 150, 0.1) $scanline-width, rgba(0, 0, 0, 0.1) $scanline-width, rgba(0, 0, 0, 0.1) $scanline-width*2);
   background-attachment: fixed;
-  animation: scanline-flicker 100ms reverse infinite;
+  animation: scanline-flicker #{1000ms / $fps} alternate infinite;
+  background-position-y: -$scanline-width/2;
 
   @at-root {
     @keyframes scanline-flicker {
@@ -51,4 +53,49 @@ body {
   padding: 200px 0;
   text-align: center;
   text-shadow: 2px 2px 1px black;
+}
+
+.live-feed {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &::after {
+    content: '';
+    display: block;
+    padding-bottom: 75%;
+  }
+
+  .live-feed-text {
+    color: red;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    user-select: none;
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 0.05em 0 0.1em rgb(255,0,128);
+    font-smooth: never;
+    -webkit-font-smoothing : none;
+    animation: flashing-text 3s infinite;
+
+    @at-root {
+      @keyframes flashing-text {
+        0% {
+          visibility: visible;
+        }
+        50% {
+          visibility: hidden;
+        }
+        100% {
+          visibility: hidden;
+        }
+      }
+    }
+    &::before {
+      content: '\25CF';
+    }
+  }
 }
