@@ -1,6 +1,7 @@
 @import "resets";
 @import "grid";
 @import "helpers";
+@import "live-video";
 
 body {
   background-color: black;
@@ -53,49 +54,4 @@ body {
 .perfect-cell {
   text-align: center;
   text-shadow: 2px 2px 1px black;
-}
-
-.live-feed {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  &::after {
-    content: '';
-    display: block;
-    padding-bottom: 75%;
-  }
-
-  .live-feed-text {
-    color: red;
-    text-transform: uppercase;
-    position: absolute;
-    bottom: 5%;
-    left: 5%;
-    user-select: none;
-    font-weight: bold;
-    font-size: 24px;
-    text-shadow: 0.05em 0 0.1em rgb(255,0,128);
-    font-smooth: never;
-    -webkit-font-smoothing : none;
-    animation: flashing-text 3s infinite;
-
-    @at-root {
-      @keyframes flashing-text {
-        0% {
-          visibility: visible;
-        }
-        50% {
-          visibility: hidden;
-        }
-        100% {
-          visibility: hidden;
-        }
-      }
-    }
-    &::before {
-      content: '\25CF';
-    }
-  }
 }

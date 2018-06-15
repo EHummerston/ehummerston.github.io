@@ -1,0 +1,93 @@
+$classname: 'live-video';
+
+.#{$classname}-player {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+
+  &.loading {
+    background-color: #333;
+
+    &::before {
+      $spinner-size: 46px;
+      content: "";
+      display: block;
+      width: 46px;
+      height: 46px;
+      margin: 1px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      border-color: #fff #fff transparent transparent;
+      animation: loading-spinner .6s linear infinite;
+      position: absolute;
+      left: calc(50% - #{$spinner-size / 2});
+      top: calc(50% - #{$spinner-size / 2});
+
+      @at-root {
+        @keyframes loading-spinner {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    padding-bottom: 75%;
+  }
+
+  .#{$classname}-feed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @at-root .loading#{&} {
+      display: none;
+    }
+
+    .#{$classname}-text {
+      color: red;
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 5%;
+      left: 5%;
+      user-select: none;
+      font-weight: bold;
+      font-size: 24px;
+      text-shadow: 0.05em 0 0.1em rgb(255, 0, 128);
+      font-smooth: never;
+      -webkit-font-smoothing: none;
+      animation: flashing-text 3s infinite;
+
+      @at-root {
+        @keyframes flashing-text {
+          0% {
+            visibility: visible;
+          }
+          50% {
+            visibility: hidden;
+          }
+          100% {
+            visibility: hidden;
+          }
+        }
+      }
+      &::before {
+        content: '\25CF';
+      }
+    }
+  }
+
+}

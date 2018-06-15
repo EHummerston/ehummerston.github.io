@@ -38,7 +38,7 @@ $gutter: 30px;
 }
 
 @mixin column($index, $columns) {
-  .col-#{$columns - $index} {
+  .col-#{$index} {
     padding: 0 $gutter;
     position: relative;
     min-height: 1px;
