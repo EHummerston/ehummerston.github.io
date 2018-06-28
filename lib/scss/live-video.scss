@@ -88,6 +88,30 @@ $classname: 'live-video';
         content: '\25CF';
       }
     }
+
+  }
+
+  .#{$classname}-info {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+
+    display: block;
+    position: absolute;
+    width: 100%;
+    padding: 30px 10px;
+    top: 0;
+    background: linear-gradient(rgba(black, 0.8) 0%, rgba(black, 0.5) 0%, transparent 100%);
+    text-align: left;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-shadow: none;
+    z-index: 11;
+
+    @at-root :hover#{&} {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
 }
