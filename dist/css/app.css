@@ -66,6 +66,7 @@ a {
   position: relative; }
   @media all and (min-width: 768px) {
     .row {
+      height: 500px;
       display: table;
       width: calc(100% + 60px); } }
 
@@ -73,133 +74,217 @@ a {
   padding: 0 30px;
   position: relative;
   min-height: 1px;
-  width: 100%;
-  vertical-align: middle; }
+  width: 100%; }
   @media all and (min-width: 768px) {
     .col-1 {
+      vertical-align: middle;
       display: table-cell;
       width: 8.33333%; } }
+  @media all and (max-width: 767px) {
+    .col-1 {
+      height: 41.66667px;
+      display: table; }
+      .col-1 .col-inner {
+        display: table-cell;
+        vertical-align: middle; } }
 
 .col-2 {
   padding: 0 30px;
   position: relative;
   min-height: 1px;
-  width: 100%;
-  vertical-align: middle; }
+  width: 100%; }
   @media all and (min-width: 768px) {
     .col-2 {
+      vertical-align: middle;
       display: table-cell;
       width: 16.66667%; } }
+  @media all and (max-width: 767px) {
+    .col-2 {
+      height: 83.33333px;
+      display: table; }
+      .col-2 .col-inner {
+        display: table-cell;
+        vertical-align: middle; } }
 
 .col-3 {
   padding: 0 30px;
   position: relative;
   min-height: 1px;
-  width: 100%;
-  vertical-align: middle; }
+  width: 100%; }
   @media all and (min-width: 768px) {
     .col-3 {
+      vertical-align: middle;
       display: table-cell;
       width: 25%; } }
+  @media all and (max-width: 767px) {
+    .col-3 {
+      height: 125px;
+      display: table; }
+      .col-3 .col-inner {
+        display: table-cell;
+        vertical-align: middle; } }
 
 .col-4 {
   padding: 0 30px;
   position: relative;
   min-height: 1px;
-  width: 100%;
-  vertical-align: middle; }
+  width: 100%; }
   @media all and (min-width: 768px) {
     .col-4 {
+      vertical-align: middle;
       display: table-cell;
       width: 33.33333%; } }
+  @media all and (max-width: 767px) {
+    .col-4 {
+      height: 166.66667px;
+      display: table; }
+      .col-4 .col-inner {
+        display: table-cell;
+        vertical-align: middle; } }
 
 .col-5 {
   padding: 0 30px;
   position: relative;
   min-height: 1px;
-  width: 100%;
-  vertical-align: middle; }
+  width: 100%; }
   @media all and (min-width: 768px) {
     .col-5 {
+      vertical-align: middle;
       display: table-cell;
       width: 41.66667%; } }
+  @media all and (max-width: 767px) {
+    .col-5 {
+      height: 208.33333px;
+      display: table; }
+      .col-5 .col-inner {
+        display: table-cell;
+        vertical-align: middle; } }
 
 .col-6 {
   padding: 0 30px;
   position: relative;
   min-height: 1px;
-  width: 100%;
-  vertical-align: middle; }
+  width: 100%; }
   @media all and (min-width: 768px) {
     .col-6 {
+      vertical-align: middle;
       display: table-cell;
       width: 50%; } }
+  @media all and (max-width: 767px) {
+    .col-6 {
+      height: 250px;
+      display: table; }
+      .col-6 .col-inner {
+        display: table-cell;
+        vertical-align: middle; } }
 
 .col-7 {
   padding: 0 30px;
   position: relative;
   min-height: 1px;
-  width: 100%;
-  vertical-align: middle; }
+  width: 100%; }
   @media all and (min-width: 768px) {
     .col-7 {
+      vertical-align: middle;
       display: table-cell;
       width: 58.33333%; } }
+  @media all and (max-width: 767px) {
+    .col-7 {
+      height: 291.66667px;
+      display: table; }
+      .col-7 .col-inner {
+        display: table-cell;
+        vertical-align: middle; } }
 
 .col-8 {
   padding: 0 30px;
   position: relative;
   min-height: 1px;
-  width: 100%;
-  vertical-align: middle; }
+  width: 100%; }
   @media all and (min-width: 768px) {
     .col-8 {
+      vertical-align: middle;
       display: table-cell;
       width: 66.66667%; } }
+  @media all and (max-width: 767px) {
+    .col-8 {
+      height: 333.33333px;
+      display: table; }
+      .col-8 .col-inner {
+        display: table-cell;
+        vertical-align: middle; } }
 
 .col-9 {
   padding: 0 30px;
   position: relative;
   min-height: 1px;
-  width: 100%;
-  vertical-align: middle; }
+  width: 100%; }
   @media all and (min-width: 768px) {
     .col-9 {
+      vertical-align: middle;
       display: table-cell;
       width: 75%; } }
+  @media all and (max-width: 767px) {
+    .col-9 {
+      height: 375px;
+      display: table; }
+      .col-9 .col-inner {
+        display: table-cell;
+        vertical-align: middle; } }
 
 .col-10 {
   padding: 0 30px;
   position: relative;
   min-height: 1px;
-  width: 100%;
-  vertical-align: middle; }
+  width: 100%; }
   @media all and (min-width: 768px) {
     .col-10 {
+      vertical-align: middle;
       display: table-cell;
       width: 83.33333%; } }
+  @media all and (max-width: 767px) {
+    .col-10 {
+      height: 416.66667px;
+      display: table; }
+      .col-10 .col-inner {
+        display: table-cell;
+        vertical-align: middle; } }
 
 .col-11 {
   padding: 0 30px;
   position: relative;
   min-height: 1px;
-  width: 100%;
-  vertical-align: middle; }
+  width: 100%; }
   @media all and (min-width: 768px) {
     .col-11 {
+      vertical-align: middle;
       display: table-cell;
       width: 91.66667%; } }
+  @media all and (max-width: 767px) {
+    .col-11 {
+      height: 458.33333px;
+      display: table; }
+      .col-11 .col-inner {
+        display: table-cell;
+        vertical-align: middle; } }
 
 .col-12 {
   padding: 0 30px;
   position: relative;
   min-height: 1px;
-  width: 100%;
-  vertical-align: middle; }
+  width: 100%; }
   @media all and (min-width: 768px) {
     .col-12 {
+      vertical-align: middle;
       display: table-cell;
       width: 100%; } }
+  @media all and (max-width: 767px) {
+    .col-12 {
+      height: 500px;
+      display: table; }
+      .col-12 .col-inner {
+        display: table-cell;
+        vertical-align: middle; } }
 
 .section-wrapper {
   position: relative;
@@ -219,6 +304,10 @@ a {
     right: 0; }
   .section-wrapper .section-wrapper-left {
     left: 0; }
+
+@media all and (max-width: 767px) {
+  .desktop-only {
+    display: none !important; } }
 
 .live-video-player {
   position: relative;
@@ -304,7 +393,8 @@ a {
 
 h1 {
   font-size: 200%;
-  text-align: center; }
+  text-align: center;
+  font-weight: bold; }
 
 h2 {
   font-size: 160%; }
@@ -328,12 +418,14 @@ body {
 
 .flame-gif {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../../lib/images/flame1.gif");
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: 100px;
-  background-position: bottom center; }
+  background-position: bottom center;
+  background-repeat: round; }
 
 .hacker-lines {
-  background-image: repeating-linear-gradient(rgba(173, 255, 47, 0.2), rgba(173, 255, 47, 0.2) 1px, transparent 1px, transparent 10px); }
+  background-image: repeating-linear-gradient(rgba(173, 255, 47, 0.2), rgba(173, 255, 47, 0.2) 1px, transparent 1px, transparent 10px);
+  background-attachment: fixed; }
 
 .scanlines {
   background-image: repeating-linear-gradient(rgba(150, 150, 150, 0.1), rgba(150, 150, 150, 0.1) 2px, rgba(0, 0, 0, 0.1) 2px, rgba(0, 0, 0, 0.1) 4px);
@@ -347,6 +439,19 @@ body {
   to {
     background-image: repeating-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 2px, rgba(128, 128, 128, 0.1) 2px, rgba(128, 128, 128, 0.1) 4px); } }
 
-.perfect-cell {
-  text-align: center;
+.text-shadow {
   text-shadow: 2px 2px 1px black; }
+
+.marquee {
+  position: relative;
+  overflow: hidden; }
+  .marquee .marquee-inner {
+    position: relative;
+    transform: translateX(100%);
+    animation: marquee 30s infinite linear; }
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%); }
+  to {
+    transform: translateX(-100%); } }

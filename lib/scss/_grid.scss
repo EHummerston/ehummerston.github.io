@@ -1,6 +1,7 @@
 @import "helpers";
 
 $gutter: 30px;
+$grid-height: 500px;
 
 @mixin clearfix() {
   &::after, &::before {
@@ -32,6 +33,7 @@ $gutter: 30px;
   margin-right: -$gutter;
   position: relative;
   @include desktop() {
+    height: $grid-height;
     display: table;
     width: calc(100% + #{$gutter*2});
   }
@@ -43,10 +45,19 @@ $gutter: 30px;
     position: relative;
     min-height: 1px;
     width: 100%;
-    vertical-align: middle;
     @include desktop() {
+      vertical-align: middle;
       display: table-cell;
       width: (($index / $columns) * 100%);
+    }
+    @include mobile() {
+      height: (($index / $columns) * $grid-height);
+      display: table;
+
+      .col-inner {
+        display: table-cell;
+        vertical-align: middle;
+      }
     }
   }
 }
@@ -81,5 +92,11 @@ $columns: 12;
   }
   .section-wrapper-left {
     left: 0;
+  }
+}
+
+.desktop-only {
+  @include mobile() {
+    display: none !important;
   }
 }
